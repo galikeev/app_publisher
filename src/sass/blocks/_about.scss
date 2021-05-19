@@ -1,0 +1,50 @@
+.about {
+    background-image: url(../img/active_phone.png);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: top left;
+    padding-bottom: 90px;
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &-descr {
+            margin-top: 50px;
+        }
+    }
+    &__img {
+        display: none;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+        img {
+            width: 55px;
+            height: 55px;
+        }
+        &-descr {
+            margin-left: 30px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 29px;
+            color: #04035F;
+        }
+        &_circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            background: #04D7CD;
+            margin-left: 5px;
+        }
+    }
+    &__img {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.work {
+    padding-top: 90px;
+    &__wrapper {
+        padding-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(2,440px);
+        grid-template-rows: repeat(2,minmax(300px,auto));
+        grid-auto-rows: minmax(300px,auto);
+        gap: 20px;
+    }
+    &__block {
+        padding: 40px 30px 40px 25px;
+        border: 1px solid #E0E0E0;
+        border-radius: 16px;
+        &:hover {
+            box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.35);
+            transform: scale(1.01);
+            transition: 0.2s all;
+            .work__block-title {
+                color: #04035F;
+                transition: 0.3s all;
+            }
+            .square {
+                background: #EEF7FE;
+                transition: 0.3s all;
+                .circle {
+                    background: $third-color;
+                    transition: 0.3s all;
+                    background: #5360FE;
+                    &__two {
+                        background: #04D7CD;
+                        transition: 0.3s all;
+                        &_color {
+                            background: #5360FE;
+                        }
+                    }
+                    &:after {
+                        background: #04D7CD;
+                    }
+                    &:before {
+                        background: #04D7CD;
+                    }
+                }
+            }
+        }
+        &-title {
+            margin-top: 20px;
+        }
+        &-descr {
+            margin-top: 20px;
+        }
+    }
+}
+
+.square {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #F2F2F2;
+    border-radius: 16px;
+    .circle {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        top: 15px;
+        left: 15px;
+        background: #E0E0E0;
+        &__two {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: #E0E0E0;
+        }
+        &-after {
+            @include circle_after;
+        }
+        &-before {
+            @include circle_before;
+        }
+        &_bg {
+            width: 50px;
+            height: 50px;
+            background: #FCFCFC;
+        }
+    }
+}

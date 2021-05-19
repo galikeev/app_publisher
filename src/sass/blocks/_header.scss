@@ -1,0 +1,125 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    &__logo {
+        a {
+            text-decoration: none;
+            color: $third-color;
+            span {
+                color: #000;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        min-width: 550px;
+        min-height: 32px;
+        align-items: center;
+        list-style-type: none;
+        margin-bottom: 0;
+        margin-top: 1px;
+        &-item {
+            position: relative;
+            &:hover {
+                margin-bottom: 10px;
+                transition: 0.3s all;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -60px;
+                    left: -10px;
+                    width: 105px;
+                    height: 20px;
+                    border-radius: 25px;
+                    background: $third-color;
+                }
+                &:nth-child(1) {
+                    &::before {
+                        left: -22px;
+                    }
+                }
+                &:nth-child(2) {
+                    &::before {
+                        left: -16px;
+                    }
+                }
+                &:nth-child(4) {
+                    &::before {
+                        left: -14px;
+                    }
+                }
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                &:hover {
+                    color: #292930;
+                }
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        &-btn {
+            display: block;
+            margin: 0 auto 0 auto;
+            width: 262px;
+            height: 50px;
+            background: $third-color;
+            color: #EEF7FE;
+            border-radius: 25px;
+            border: none;
+            &:hover {
+                background: #04D7CD;
+                color: #04035F;
+                transition: 0.3s all;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &-lang {
+            position: relative;
+            display: inline-block;
+            margin-left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #EEF7FE;
+            border-radius: 16px;
+            text-align: center;
+            &_ru {
+                cursor: pointer;
+                text-align: center;
+                margin-top: 13px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 400;
+                color: $third-color;
+                &:hover {
+                    font-weight: bold;
+                    transition: 0.3s all;
+                }
+            }
+            &_en {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                display: none;
+                &_active {
+                    display: flex;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 16px;
+                    background: #EEF7FE;
+                }
+            }
+        }
+    }
+}

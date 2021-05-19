@@ -1,0 +1,542 @@
+@media (max-width: 1200px) {
+    .container {
+        width: 860px;
+    }
+    .title {
+        &_fz24 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &_fz46 {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+    .header {
+        margin-left: 40px;
+        margin-right: 40px;
+        &__list {
+            min-width: 485px;
+        }
+        &__buttons {
+            &-btn {
+                width: 200px;
+            }
+            &-lang {
+                margin-left: 20px;
+            }
+        }
+    }
+    .promo {
+        padding-bottom: 100px;
+        background-position: top 0 right 90px;
+        background-size: 40%;
+        &__buttons {
+            &-btn {
+                width: 210px;
+                height: 60px;
+            }
+        }
+    }
+    .about {
+        background-size: 48%;
+        padding-bottom: 80px;
+        &__block {
+            &-descr {
+                margin-top: 40px;
+            }
+        }
+        &__item {
+            margin-top: 40px;
+        }
+    }
+    .games {
+        &__block {
+            width: 275px;
+        }
+        &__img {
+            margin: 20px;
+        }
+    }
+    .work {
+        padding-top: 80px;
+        &__wrapper {
+            grid-template-columns: repeat(2,420px);
+        }
+    }
+    .link {
+        &__wrapper {
+            width: 860px;
+            &-bg {
+                position: absolute;
+                top: 19%;
+                left: 80%;
+                width: 230px;
+            }
+        }
+        &__form {
+            grid-template: repeat(5,minmax(45px,auto))/repeat(2,290px);
+        }
+        &__btn {
+            width: 190px;
+            height: 45px;
+        }
+    }
+    .footer {
+        &__contacts {
+            margin-top: 40px;
+            grid-template-columns: repeat(2,165px);
+            grid-template-rows: repeat(2,minmax(70px,auto));
+            grid-auto-rows: minmax(70px,auto);
+            gap: 10px;
+        }
+        &__social {
+            margin-top: 28px;
+        }
+    }
+    .modal {
+        &__dialog {
+            width: 690px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 700px;
+    }
+    .title {
+        &_fz15 {
+            font-size: 13px;
+            line-height: 18px;
+        }
+        &_fz16 {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &_fz24 {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &_fz46 {
+            font-size: 37px;
+            line-height: 42px;
+        }
+    }
+    .header {
+        &__list {
+            min-width: 425px;
+            &-item {
+                &:hover {
+                    margin-bottom: 0;
+                    transition: none;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &__buttons {
+            &-btn {
+                margin: auto;
+                width: 180px;
+                height: 45px;
+                font-size: 14px;
+            }
+            &-lang {
+                display: none;
+            }
+        }
+    }
+    .promo {
+        background-position: top 0 right 70px;
+        padding-bottom: 70px;
+        &__block {
+            padding-top: 90px;
+        }
+        &__descr {
+            width: 370px;
+            br {
+                content: '';
+            }
+            br {
+                &:after {
+                    content: '\00a0';
+                }
+            }
+        }
+        &__buttons {
+            font-size: 14px;
+            &-btn {
+                margin: auto;
+                width: 190px;
+                height: 55px;
+            }
+        }
+    }
+    .about {
+        padding-bottom: 70px;
+        &__block {
+            &-descr {
+                margin-top: 20px;
+                width: 380px;
+                br {
+                    content: '';
+                }
+                br {
+                    &:after {
+                        content: '\00a0';
+                    }
+                }
+            }
+        }
+        &__item {
+            &-descr {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    .games {
+        &__title {
+            text-align: center;
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    .work {
+        padding-top: 70px;
+        &__title {
+            text-align: center;
+        }
+        &__wrapper {
+            padding-top: 20px;
+            grid-template-columns: repeat(1,460px);
+            grid-template-rows: repeat(2,minmax(250px,auto));
+            grid-auto-rows: minmax(250px,auto);
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+    .link {
+        &__wrapper {
+            padding: 30px 50px;
+            width: 700px;
+            &-bg {
+                display: none;
+            }
+        }
+        &__form {
+            margin-top: 35px;
+        }
+    }
+    .footer {
+        &__title {
+            text-align: center;
+        }
+        &__wrapper {
+            justify-content: center;
+        }
+        &__map {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 500px;
+    }
+    .title {
+        &_fz16 {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &_fz25 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &_fz46 {
+            font-size: 33px;
+            line-height: 35px;
+        }
+    }
+    .header {
+        nav {
+            display: none;
+        }
+        &__buttons {
+            display: none;
+        }
+    }
+    .promo {
+        background: #fff;
+        &__block {
+            padding-top: 50px;
+        }
+    }
+    .about {
+        background-position: top -10px left;
+        &__block {
+            &-descr {
+                width: 300px;
+            }
+        }
+        &__item {
+            margin-top: 25px;
+            &-descr {
+                font-size: 15px;
+            }
+        }
+    }
+    .games {
+        &__subtitle {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &__block {
+            margin-top: 15px;
+            width: 235px;
+            height: 390px;
+        }
+        &__img {
+            img {
+                width: 190px;
+            }
+        }
+        &__game {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &__num {
+            font-size: 13px;
+            line-height: 17px;
+            &-divider {
+                height: 25px;
+            }
+        }
+    }
+    .work {
+        &__wrapper {
+            grid-template-columns: repeat(1,325px);
+            grid-template-rows: repeat(2,minmax(240px,auto));
+            grid-auto-rows: minmax(250px,auto);
+        }
+    }
+    .link {
+        &__subtitle {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &__wrapper {
+            width: 500px;
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+        }
+        &__input {
+            width: 400px;
+            height: 45px;
+        }
+        &__select {
+            width: 400px;
+            height: 45px;
+        }
+    }
+    .footer {
+        &__contacts {
+            &-title {
+                font-size: 16px;
+                line-height: 21px;
+            }
+            &-descr {
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 300px;
+    }
+    .title {
+        &_fz46 {
+            font-size: 29px;
+            line-height: 33px;
+        }
+    }
+    .promo {
+        background: none;
+        padding-bottom: 0px;
+        &__block {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        &__title {
+            text-align: center;
+            br {
+                content: '';
+            }
+            br {
+                &:after {
+                    content: '\00a0';
+                }
+            }
+        }
+        &__descr {
+            width: 280px;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        &__buttons {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            &-watch {
+                margin: 0;
+            }
+            &-btn {
+                margin-top: 40px;
+            }
+        }
+    }
+    .about {
+        background: none;
+        &__title {
+            text-align: center;
+        }
+        &__block {
+            &-descr {
+                width: 280px;
+                font-size: 15px;
+                line-height: 20px;
+                text-align: center;
+            }
+        }
+        &__img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .work {
+        &__wrapper {
+            grid-template-columns: repeat(1,260px);
+        }
+    }
+    .link {
+        &__wrapper {
+            padding: 20px;
+            width: 300px;
+            border-radius: 15px;
+        }
+        &__input {
+            width: 260px;
+            input {
+                font-size: 16px;
+                line-height: 16px;
+                padding: 0 12px;
+            }
+        }
+        &__select {
+            width: 260px;
+            select {
+                font-size: 16px;
+                line-height: 16px;
+                padding: 0 40px 0 12px;
+            }
+        }
+    }
+    .footer {
+        padding: 70px 10px 0 10px;
+        &__wrapper {
+            display: block;
+        }
+        &__contacts {
+            display: block;
+            &-item {
+                margin-top: 15px;
+            }
+        }
+        &__social {
+            a {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover {
+                    transition: none;
+                    transform: none;
+                }
+                &:nth-child(1) {
+                    display: inline-block;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:nth-child(2) {
+                    display: inline-block;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:nth-child(3) {
+                    display: inline-block;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:nth-child(4) {
+                    display: inline-block;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+                &:nth-child(5) {
+                    display: inline-block;
+                    background: none;
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+        }
+        &__policy {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+    .modal {
+        &__dialog {
+            margin: 5px auto;
+            overflow-y: scroll;
+        }
+        &__close {
+            top: -10px;
+            right: 7px;
+        }
+    }
+}

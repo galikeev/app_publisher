@@ -1,0 +1,101 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(78, 81, 83, 0.5);
+    backdrop-filter: blur(10px);
+    &__dialog {
+        width: 690px;
+        border-radius: 15px;
+        padding: 30px 45px;
+        margin: 40px auto;
+    }
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        font-size: 35px;
+        color: #04035F;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+    }
+    &__form {
+        margin-top: 30px;
+        grid-template: repeat(5,minmax(45px,auto))/repeat(2,290px);
+        gap: 10px;
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(78, 81, 83, 0.5);
+    backdrop-filter: blur(10px);
+}
+.thanks-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 250px;
+    background-color: #EEF7FE;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    &__title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #292930;
+    }
+    &__descr {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 21px;
+        color: #04035F;
+    }
+}

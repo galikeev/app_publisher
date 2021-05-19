@@ -1,4 +1,5 @@
 const gulp        = require('gulp');
+const webpack = require("webpack-stream");
 const browserSync = require('browser-sync');
 const sass        = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
@@ -44,8 +45,32 @@ gulp.task('html', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src("src/js/**/*.js")
-        .pipe(gulp.dest("dist/js"))
+    return gulp.src("./src/js/main.js")
+    .pipe(webpack({
+        mode: 'production',
+        output: {
+            filename: 'script.js'
+        },
+        module: {
+            rules: [
+              {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: [['@babel/preset-env', {
+                        debug: false,
+                        corejs: 3,
+                        useBuiltIns: "usage"
+                    }]]
+                  }
+                }
+              }
+            ]
+          }
+    }))
+    .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 });
 

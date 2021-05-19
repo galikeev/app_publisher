@@ -1,0 +1,52 @@
+.promo {
+    padding-bottom: 210px;
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top -40px right 40px;
+    &__block {
+        padding-top: 125px;
+        img {
+            display: none;
+        }
+    }
+    &__buttons {
+        margin-top: 40px;
+        &-btn {
+            width: 255px;
+            height: 70px;
+            background: $third-color;
+            color: #EEF7FE;
+            border-radius: 35px;
+            border: none;
+            &:hover {
+                background: #04D7CD;
+                color: #04035F;
+                transition: 0.3s all;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &-watch {
+            margin-left: 30px;
+            text-decoration: none;
+            color: $second-color;
+            &:hover {
+                color: #04035F;
+                text-decoration: none;
+                transition: 0.3s all;
+                svg circle {
+                    fill: #04D7CD;
+                    text-decoration: none;
+                    transition: 0.3s all;
+                }
+            }
+        }
+    }
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+}
