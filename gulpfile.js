@@ -10,10 +10,10 @@ const htmlmin = require('gulp-htmlmin');
 
 gulp.task('server', function() {
 
-    browserSync({
-        server: {
-            baseDir: "dist"
-        }
+    browserSync.init({
+		server: "./dist/",
+		port: 4000,
+		notify: true
     });
 
     gulp.watch("src/*.html").on('change', browserSync.reload);
