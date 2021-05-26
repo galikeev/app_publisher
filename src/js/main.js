@@ -12,8 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // Modal (Модальное окно)
 
     const modalTrigger = document.querySelectorAll('[data-modal]'),
-    modal = document.querySelector('.modal'),
-    bodyScrollMenu = document.querySelector('body');
+    modal = document.querySelector('.modal');
 
     modalTrigger.forEach(btn => {
         btn.addEventListener('click', openModal);
@@ -23,14 +22,12 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('hide');
         modal.classList.remove('show');
         document.body.style.overflow = '';
-        bodyScrollMenu.classList.toggle('menu_scroll');
     }
 
     function openModal() {
         modal.classList.add('show');
         modal.classList.remove('hide');
         document.body.style.overflow = 'hidden';
-        bodyScrollMenu.classList.toggle('menu_scroll');
         clearInterval(modalTimerId);
     }
 
@@ -54,7 +51,6 @@ window.addEventListener('DOMContentLoaded', () => {
         // FORMS
     const forms = document.querySelectorAll('form');
     const message = document.querySelector('.overlay');
-    const bodyScrollForms = document.querySelector('body');
 
     forms.forEach(item => {
         bindPostData(item);
@@ -87,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }).catch(() => {
                 ThanksOpenModal();
             }).finally(() => {
-                bodyScrollForms.classList.toggle('menu_scroll');
+                document.body.style.overflow = '';
                 form.reset();
             });
         });
@@ -97,8 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('hide');
         modal.classList.remove('show');
         message.style.display = 'block';
-        document.body.style.overflow = '';
-        bodyScrollForms.classList.toggle('menu_scroll');
+        document.body.style.overflow = 'hidden';
         setTimeout(ThanksCloseModal, 3000);
     }
 
@@ -107,7 +102,6 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('show');
         document.body.style.overflow = '';
         message.style.display = 'none';
-        bodyScrollForms.classList.toggle('menu_scroll');
         clearInterval(modalTimerId);
     }
 
