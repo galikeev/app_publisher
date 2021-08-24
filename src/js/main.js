@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const modalTrigger = document.querySelectorAll('[data-modal]'),
     modal = document.querySelector('.modal');
+    const scrollHide = calcScroll();
 
     modalTrigger.forEach(btn => {
         btn.addEventListener('click', openModal);
@@ -22,12 +23,14 @@ window.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('hide');
         modal.classList.remove('show');
         document.body.style.overflow = '';
+        document.body.style.marginRight = `0px`;
     }
 
     function openModal() {
         modal.classList.add('show');
         modal.classList.remove('hide');
         document.body.style.overflow = 'hidden';
+        document.body.style.marginRight = `${scrollHide}px`;
         clearInterval(modalTimerId);
     }
 
@@ -46,7 +49,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const modalTimerId = setTimeout(openModal, 300000);
 
 
-
+    function calcScroll() {
+        let div = document.createElement('div');
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+        document.body.appendChild(div);
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
+        return scrollWidth;
+    }
 
         // FORMS
     const forms = document.querySelectorAll('form');
